@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # for API versioning
-  # namespace :api do
-  #   namespace :v1 do
-  #     resources :comics
-  #   end
-  # end
+  namespace :api do
+    namespace :v1 do
+      resources :comics
+    end
+  end
   
-  root "comics#index"
-  resources :comics
+  # root "comics#index"
+  # resources :comics
 end

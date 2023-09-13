@@ -1,4 +1,4 @@
-class ComicsController < ApplicationController
+class Api::V1::ComicsController < ApplicationController
 
   def show
   end
