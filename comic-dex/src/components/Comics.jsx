@@ -18,7 +18,6 @@ export default function Comics() {
 
   return (
     <>
-      <h1>🛠️ComicDex🛠️</h1>
       <h2>Comics List</h2>
       {comics.map((comic) => (
         <div key={comic.id} className="post-container">
