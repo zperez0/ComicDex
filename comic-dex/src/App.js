@@ -1,16 +1,16 @@
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Comics from "./components/Comics";
-import HomePage from "./components/HomePage";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      {/* <Router>
-      <Route element={ <HomePage />} />
-      </Router> */}
-      <HomePage />
-      <Comics />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="comics" element={<Comics />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

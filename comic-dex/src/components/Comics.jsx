@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../constants";
+import { Link } from "react-router-dom";
 
 export default function Comics() {
   const [comics, setComics] = useState([]);
@@ -17,14 +18,18 @@ export default function Comics() {
   }, []);
 
   return (
-    <>
-      <h2>Comics List</h2>
-      {comics.map((comic) => (
-        <div key={comic.id} className="post-container">
-          <h3>{comic.title}</h3>
-          <p>{comic.description}</p>
-        </div>
-      ))}
-    </>
+    <div>
+      <h1>Comics List</h1>
+      <Link to="/">
+        <button>Return Home</button>
+      </Link>
+      <ul>
+        {comics.map((comic) => (
+          <li key={comic.id}>
+            {comic.title} - Issue #{comic.issue_number}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
